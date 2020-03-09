@@ -28,6 +28,13 @@ button.on(
             ).done(
                 function(resultJSON){
                     console.log(resultJSON);
+
+                    let profoundWis = new Kanye(resultJSON.quote);
+
+                    document.body.innerHTML += "<p>" + profoundWis.speakDestiny() + "</p> <br>";
+                    document.body.innerHTML += "<p>" + profoundWis.shoutDestiny() + "</p> <br>";
+                    document.body.innerHTML += "<p>" + profoundWis.refuseDestiny() + "</p> <br>";
+
                 }
             ).fail(
                 function(xhr, status, error){
